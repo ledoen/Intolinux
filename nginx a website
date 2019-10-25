@@ -61,5 +61,4 @@ touch /etc/nginx/sites-available/example
 #            fastcgi_param SCRIPT_FILENAME /var/www/example$fastcgi_script_name;
 #    }
 #}
-#}
 
