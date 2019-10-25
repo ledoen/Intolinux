@@ -1,0 +1,65 @@
+#step1 upload your web files
+mkdir /var/www/html/example #then upload web files at this dir
+#if the index page is index.html, you can now open the page in the web explorer by type url:http://youipadress/example
+#By this way, you don't need to do any config work, it's done here!
+#if you want visit the website by domine/host name, or by port, go on next
+#by this way, we can put the website file at other dir, we will use /var/www/example at follow steps
+
+#step2 create a config file
+touch /etc/nginx/sites-available/example
+#paste content like this:
+#server {
+#       listen 80;
+#       listen [::]:80;
+#
+#       server_name example.com;
+#
+#       root /var/www/example;
+#       index index.html;
+#
+#       location / {
+#               try_files $uri $uri/ =404;
+#       }
+#}
+
+
+#step3 edit the file
+#visited by domine, change the servernane for yours
+#visited by port(usually in local area network， multi websites), chang the file like this:
+#server {
+#       listen yourport;
+#       #listen [::]:80;
+#
+#       server_name IP_ADRESS;
+#
+#       root /var/www/example;
+#       index index.html;
+#
+#       location / {
+#               try_files $uri $uri/ =404;
+#       }
+
+
+#step4 php webpages surport
+#edit the config file like this
+#    server {
+#    listen 80;
+#    listen [::]:80;
+
+#    server_name example.com;
+#
+#    root   /var/www/example.com;
+#    index  index.html index.php;
+#
+#    location / {
+#        try_files $uri $uri/ =404;
+#    }
+#    location ~ \.php$ {
+#            include snippets/fastcgi-php.conf;
+#            include fastcgi_params;
+#            fastcgi_pass unix:/run/php/php7.0-fpm.sock;
+#            fastcgi_param SCRIPT_FILENAME /var/www/example$fastcgi_script_name;
+#    }
+#}
+#}
+
