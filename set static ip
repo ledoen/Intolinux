@@ -1,0 +1,17 @@
+#via edit network config file to set static ip
+#usually ubuntu 16.04 network config file dir is /etc/network/interfaces
+sudo nano /etc/network/interfaces
+#the origin file may be like this
+  auto enp12s0
+  iface enp12s0 inet dhcp
+
+#edit it like this
+  auto enp12s0
+  iface enp12s0 inet static
+  address 192.168.50.10
+  netmask 255.255.255.0
+  gateway 192.168.50.1
+  dns-nameservers 192.168.50.1
+
+#then restart the network
+sudo /etc/init.d/networking restart

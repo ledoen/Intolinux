@@ -1,0 +1,6 @@
+#use this order, should use none root accout
+ssh-keygen
+#the path of the keys:/home/'username'/.ssh
+#two files id_rsa id_rsa.pub
+scp id_rsa username@remoteclienthost
+mv id_rsa.pub authorized_keys
