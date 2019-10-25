@@ -1,0 +1,16 @@
+sudo apt update && sudo apt upgrade;
+sudo apt install nginx;
+#nginx is already installed, then testing it.
+#input ipadress into the web explorer, note that:
+#the protocol shoud be http, not https, 
+#if nginx works, the welcome pages will appear in the web explorer.
+#the config file located at /etc/nginx/sites-available,
+#the root dir is /var/www/html,
+#if ubuntu 14.04, the root dir is /usr/share/nginx
+#usual option instruction:
+#nginx -s start/stop/reload
+#or 
+#systemctl start/stop/restart nginx
+#or
+#service nginx start/stop/restart
+#check the config file use "nginx -t"
