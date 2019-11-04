@@ -10,7 +10,7 @@ sudo apt install unzip
 cd /tmp
 sudo wget https://wordpress.org/latest.tar.gz
 sudo tar xzvf latest.tar.gz
-sudo cp wordpress /var/www/
+sudo cp -a /tmp/wordpress/. /var/www/wordpress
 
 
 #Step III creat mysql and config
