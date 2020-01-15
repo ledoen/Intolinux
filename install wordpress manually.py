@@ -64,3 +64,20 @@ sudo nano /var/www/wordpress/wp-config.php
 
 
 #####it's done! you can continue by the webexplorer
+
+
+##################other command
+
+mysql_secure_installation       #inistialize the mysql
+
+nano /etc/nginx/nginx.conf      #edit nginx to allow upload bigger file size
+#add this
+#http{
+#    ...
+#    client_max_body_size 20m;
+#    ...
+#    }
+
+sudo find / -name 'php.ini'     #find php.ini file and edit the upload block to allow big file size
+
+
