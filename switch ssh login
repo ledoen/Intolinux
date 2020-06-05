@@ -1,0 +1,15 @@
+#步骤
+#1.打开ssh配置文件
+#2.使能密码登录
+#3.设置密码
+#4.重启服务
+
+
+#代码如下
+nano /etc/ssh/sshd_config		#ssh的配置文件为sshd_config
+#在文件中找到# Authentication:
+PermitRootLogin yes #默认为no，如果需要开启root账号登录，则改为yes
+PasswordAuthentication yes #默认为no，改为yes开启密码登陆
+passwd username
+#输入要设置的密码
+/etc/init.d/ssh restart   #重启服务
