@@ -1,0 +1,5 @@
+aria2的bt/磁力下载速度慢，问题出在tracker服务器上
+修改tracker服务器的方法如下
+tracker服务器的地址获取地址：https://github.com/ngosang/trackerslist
+自动更新方法，在逗逼的脚本里，可以找到相关位置
+也可以在ariang界面进行修改
