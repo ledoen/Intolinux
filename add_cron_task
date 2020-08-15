@@ -1,0 +1,14 @@
+//Step1:新建一个cron表
+nano /root/crons/crontask
+
+/*********cron表的内容**********/
+分（0-59） 时（1-23） 日期（1-31） 月（1-12） 星期（0-6） command（命令）
+每个时间的表示方式“*/5”，表示每5个*（分、时...）
+例如：
+*/1 * * * * date >> /tmp/testCron.txt  每隔1分钟执行date命令并将结果保存至文件/tmp/testCron.txt中
+*/3 * * * * /var/backups/test.sh  每隔3分钟执行一次/var/backups/test.sh 文件
+/*******************/
+
+//Step2：将任务表加入执行序列
+crontab /root/crons/crontask
+/etc/init.d/cron restart
