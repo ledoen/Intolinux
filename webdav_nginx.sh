@@ -25,6 +25,8 @@ server {
 
       autoindex on; # 可以在浏览器打开
 
+      client_max_body_size    1000m;    #设置最大文件限制
+      
       #limit_except GET {
       #  allow 115.115.0.0/32; # 允许访问的IP段，可以填自己家的IP，这样就只有你家的IP可以访问，大大增加安全性。
       #  deny  all;
