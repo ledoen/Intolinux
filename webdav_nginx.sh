@@ -22,6 +22,7 @@ server {
 
       create_full_put_path on;
       dav_access user:rw group:r;
+      charset utf-8; #编码方式
 
       autoindex on; # 可以在浏览器打开
 
